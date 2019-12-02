@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<h1>Chirps</h1>
+		<ul>
+			<% @chirps.each do |row| %>
+				<li><%= row.text %> </li>
+			<% end %>
+
+		</ul>
+		<h3> weather results for fran </h3>
+		<ul>
+			<% @wetherData.each do |row| %>
+				<li><%= row.fetch('title') %> </li>
+				<li><%= row.fetch('location_type') %> </li>
+			<% end %>	
+		</ul>
+	</body>
+</html>
